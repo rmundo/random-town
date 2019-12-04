@@ -13,6 +13,8 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/random-town.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
 
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -22,8 +24,18 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css">
+
   <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+
+  <div id="wrapper">
+    <p>
+      <button class="pure-button" onclick="randomTown()">Get a Town</button>
+    </p>
+  </div>
+  <div id="wrapper">
+  <p id="demo"></p>
+  </div>
   <script src="js/vendor/modernizr-3.7.1.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
@@ -36,6 +48,21 @@
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
+
+  <script>
+      function randomTown() {
+        var townArray = ["曼谷","清邁","芭達亞","烏泰他尼","那空沙旺","合艾","安納乍能","暖武里",
+        "北欖","烏隆他尼","春武里","呵叻","白蒛","是拉差","拍芭甸","南邦","坤敬","素叻","烏汶",
+        "信雅武里","空巒","羅勇","洛坤","佛統","彭世洛","尖竹汶","惹拉","普吉","叻丕","宋卡","北標",
+        "清萊","挽奎","阿育跎耶","色軍","甲通龐","莎打厝","董里","北碧","廊開","蘭路賈","甘烹碧",
+        "龍仔厝","拍浦他芭","程逸","猜也賁","盤蓬","華富里","春蓬","港生","加拉信","莎馬賈","素攀",
+        "華欣","碧差汶","嗎哈沙拉堪","洽安","北大年","北柳","盼武里","陶公","白昌","佛丕","素輦",
+        "沙島","春丕","湄梭","四色菊","華林汕叻","挽磨統","素艾郭洛","莎揚","博他侖","農皆","莫拉限",
+        "達笠","盤拋","蘇美島","素可泰","南奔","衛尖武里","湄善","橫逸"];
+        var randomTown = townArray[Math.floor(Math.random() * townArray.length)];
+        document.getElementById("demo").innerHTML = randomTown;
+      }
+      </script>
 </body>
 
 </html>
